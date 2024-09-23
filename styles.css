@@ -1,0 +1,152 @@
+/* Default Light Mode Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Button Styles */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Input Styles */
+input {
+    width: calc(100% - 24px);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Todo List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+li span {
+    flex: 1;
+}
+
+li i {
+    font-size: 20px; /* Increased size for better visibility */
+    cursor: pointer;
+    margin-left: 15px; /* Increased margin between buttons */
+    padding: 5px; /* Added padding to improve spacing */
+    transition: opacity 0.3s;
+}
+
+li i:hover {
+    opacity: 0.7;
+}
+
+li .fa-check {
+    color: #28a745;
+}
+
+li .fa-trash {
+    color: red;
+}
+
+li.strikethrough span {
+    text-decoration: line-through;
+}
+
+/* Tooltips */
+li i::after {
+    content: attr(title);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+li i:hover::after {
+    opacity: 1;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.container.dark-mode {
+    background-color: #444;
+}
+
+button.dark-mode {
+    background-color: #555;
+}
+
+button.dark-mode:hover {
+    background-color: #666;
+}
+
+input.dark-mode {
+    background-color: #555;
+    color: #f4f4f4;
+    border: 1px solid #666;
+}
+
+li.dark-mode {
+    border-bottom: 1px solid #666;
+}
+
+li.strikethrough span.dark-mode {
+    text-decoration: line-through;
+    color: #888;
+}
